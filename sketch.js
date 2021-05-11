@@ -18,13 +18,16 @@ function gotData(data) {
   //for displaying object, pagination, and meta
   // print(data);
 
-  //for displaying the link to the first image listed in the search query (api + apiKey + query)
-  // println(data.data[0].images.original.url);
+  //for displaying the link to the chosen image listed in the search query (api + apiKey + query)
+  //happy earth day
+  print(data.data[3].images.original.url);
 }
 
-//for displaying all the images listed in the search query
 function gotData(giphy) {
+  //for displaying all the images listed in the search query
   for (var i=0; i<giphy.data.length; i++) {
-    createImg(giphy.data[i].images.original.url, 'altText');
+    //createImg(giphy.data[i].images.original.url, 'altText');
   }
+  //for displaying multiple copies of the chosen image
+  createImg(giphy.data[3].images.original.url, 'Happy Earth Day');
 }
